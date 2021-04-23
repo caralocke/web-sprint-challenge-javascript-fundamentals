@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// My Explanation: nestedFunction can access the variable internal because it is the child of the myFunction function. Being that it was told to console.log the variable internal and that particular variable doesn't exist inside of nestedFunction, it looks outside of its scope to the next available one (in this case would be myFunction) to see if it has one available. With the variable internal being available to myFunction and that nestedFunction is inside of myFunction, that's the next place it would look and finds it.
 
 
 
@@ -28,10 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let sum = 0;
+  for(let i = 0; i < num; i++){
+    return sum + i;
   }
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,8 +58,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(arr){
+    const displayNames = []; {
+      zooAnimals.forEach(function(animal_name, scientific_name){
+        return displayNames.push(animal_name,scientific_name);
+      })
+    }
   }
   
 
@@ -101,28 +107,28 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a, b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(num1, num2,){
+    return num1 + num2;
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(num1, num2,){
+   return num1 * num2;
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(firstName, lastName){
+   return `Hello ${firstName} ${lastName}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
