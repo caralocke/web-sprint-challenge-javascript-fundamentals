@@ -29,9 +29,8 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  let sum = 0;
   for(let i = 0; i < num; i++){
-    return sum + i;
+    return num[i];
   }
 }
  
@@ -60,9 +59,10 @@ const zooAnimals = [
 
   function animalNames(arr){
     const displayNames = []; {
-      zooAnimals.forEach(function(animal_name, scientific_name){
-        return displayNames.push(animal_name,scientific_name);
-      })
+      arr.forEach(function(item){
+        displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+      });
+      return displayNames;
     }
   }
   
@@ -73,8 +73,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCaseNames = array.map(function(item){
+      return item.animal_name.toLowerCase;
+    })
   }
   
   
@@ -94,8 +96,10 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(arr){
+    const totalPop = arr.reduce(function(acc, state){
+      return acc + state.population;
+    },0);
   }
   
   
