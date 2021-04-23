@@ -97,9 +97,8 @@ const zooAnimals = [
   */
 
   function USApop(arr){
-    const totalPop = arr.reduce(function(acc, state){
-      return acc + state.population;
-    },0);
+    const total = arr.reduce((acc, item) => {return acc + item.population}, 0);
+    console.log(total);
   }
   
   
