@@ -29,9 +29,11 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(num) {
-  for(let i = 0; i < num; i++){
-    return num[i];
+  let sum = 0;
+  for(let i = 1; i <= num; i++){
+    sum += i;
   }
+    return sum;
 }
  
 
@@ -96,11 +98,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
+ 
   function USApop(arr){
     const total = arr.reduce((acc, item) => {return acc + item.population}, 0);
-    console.log(total);
+    return total;
   }
-  
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
